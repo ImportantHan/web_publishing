@@ -26,12 +26,11 @@
   <body>
     <div class="container">
 
-      <div class="modal_bg"></div>
-      <div class="modal">
-        
-      </div>
 
-
+      <input id="modalToggle" class="hide" type="checkbox">
+      <section class="modal">
+      
+      
       <div class="contents">
         <div class="select_view">
           <h4 class="title"><b>Student Information</b></h4>
@@ -41,156 +40,33 @@
           </div>
         </div>
         <div class="student_list_wrapper">
+          
           <div class="student_list_card_view row">
-            <div class="student" onclick="this.classList.add('expand')">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
             <div class="student">
               <div class="student_image"></div>
-              <div class="student_text"></div>
+              <div class="student_text">
+                
+                    <label class="btn btn-open" for="modalToggle">Open modal</label>  
+                    <div class="inside">
+                        <label class="btn-close" for="modalToggle">X</label>
+                        <p>Text goes here.</p>
+                    </div>
+                
+              </div>
+              </div>
+
+            <div class="student_list_list_view row d-none">
+              <div class="student">
+                <div class="student_image"></div>
+                <div class="student_text"></div>
+              </div>
             </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-          </div>
-          <div class="student_list_list_view row d-none">
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
-            <div class="student">
-              <div class="student_image"></div>
-              <div class="student_text"></div>
-            </div>
+
           </div>
         </div>
-      </div>
+
+        </section>
+
     </div>
 
     <script src="cardUI.js"></script>
