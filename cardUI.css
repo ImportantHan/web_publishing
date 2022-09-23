@@ -1,136 +1,180 @@
 .hidden {
-    display: none;
+  display: none;
 }
 
-.container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container .contents{
-    height: 40%;
-    width: 50%;
-    border: 1px solid rgb(184, 184, 184);
-    border-radius: 20px;
-    box-shadow: 0 0 1px #000 ;
+.container .modal {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    
 }
 
-.container .contents .select_view{
-    height: 14%;
-    width: 100%;
-    /* background-color: brown; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+.container .contents {
+  height: 40%;
+  width: 50%;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 20px;
+  box-shadow: 0 0 1px #000;
+}
+
+.container .contents .select_view {
+  height: 14%;
+  width: 100%;
+  /* background-color: brown; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .container .contents .select_view .title {
-    margin: 0 0 0 4%;
+  margin: 0 0 0 4%;
 }
 
 .container .contents .select_view .view {
-    height: 90%;
-    width: 10%;
-    margin: 0 0.5% 0 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 2% 0 0;
+  height: 90%;
+  width: 10%;
+  margin: 0 0.5% 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 2% 0 0;
 }
 
-.container .contents .select_view .view .fa-solid{
-    font-size: 20px;
+.container .contents .select_view .view .fa-solid {
+  font-size: 20px;
 }
 
-.container .contents .student_list_wrapper{
-    height: 86%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.container .contents .student_list_wrapper {
+  height: 86%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.container .contents .student_list_wrapper .student_list_card_view{
-    height: 96%;
-    width: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    overflow: scroll;
-    -ms-overflow-style: none;
+.container .contents .student_list_wrapper .student_list_card_view {
+  height: 96%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  overflow: scroll;
+  -ms-overflow-style: none;
 }
-.container .contents .student_list_wrapper .student_list_card_view::-webkit-scrollbar {
-    display: none;
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_card_view::-webkit-scrollbar {
+  display: none;
 }
 
 .container .contents .student_list_wrapper .student_list_card_view .student {
-    height: 55%;
-    width: 32.3%;
-    /* background-color: red; */
-    margin: 1% 0.5%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 55%;
+  width: 32.3%;
+  /* background-color: red; */
+  margin: 1% 0.5%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container .contents .student_list_wrapper .student_list_card_view .student .student_image {
-    height: 70%;
-    width: 65%;
-    background-color: #FFE3FF;
-    border-radius: 20px;
+.container .contents .student_list_wrapper .student_list_card_view .student:not(.expand) {
+    cursor: pointer;
+}
+.container .contents .student_list_wrapper .student_list_card_view .student:not(.expand):hover {
+    background: #c2c0c2;
 }
 
-.container .contents .student_list_wrapper .student_list_card_view .student .student_text {
-    height: 15%;
-    width: 70%;
-    background-color: #F2ECFF;
-    margin-top: 4%;
-    border-radius: 10px;
-    text-align: center;
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_card_view
+  .student
+  .student_image {
+  height: 70%;
+  width: 65%;
+  background-color: #ffe3ff;
+  border-radius: 20px;
 }
 
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_card_view
+  .student
+  .student_text {
+  height: 15%;
+  width: 70%;
+  background-color: #f2ecff;
+  margin-top: 4%;
+  border-radius: 10px;
+  text-align: center;
+}
 
 .container .contents .student_list_wrapper .student_list_list_view {
-    height: 96%;
-    width: 95%;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    overflow: scroll;
-    -ms-overflow-style: none;
+  height: 96%;
+  width: 95%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  overflow: scroll;
+  -ms-overflow-style: none;
 }
-.container .contents .student_list_wrapper .student_list_list_view::-webkit-scrollbar {
-    display: none;
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_list_view::-webkit-scrollbar {
+  display: none;
 }
 
 .container .contents .student_list_wrapper .student_list_list_view .student {
-    height: 16%;
-    width: 100%;
-    /* background-color: red; */
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5% 0;
+  height: 16%;
+  width: 100%;
+  /* background-color: red; */
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5% 0;
 }
 
-.container .contents .student_list_wrapper .student_list_list_view .student .student_image {
-    height: 80%;
-    width: 10%;
-    background-color: #FFE3FF;
-    border-radius: 10px;
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_list_view
+  .student
+  .student_image {
+  height: 80%;
+  width: 10%;
+  background-color: #ffe3ff;
+  border-radius: 10px;
 }
 
-.container .contents .student_list_wrapper .student_list_list_view .student .student_text {
-    height: 80%;
-    width: 50%;
-    background-color: #F2ECFF;
-    border-radius: 10px;
-    text-align: center;
+.container
+  .contents
+  .student_list_wrapper
+  .student_list_list_view
+  .student
+  .student_text {
+  height: 80%;
+  width: 50%;
+  background-color: #f2ecff;
+  border-radius: 10px;
+  text-align: center;
 }

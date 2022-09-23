@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="detailCard.css" media="all" rel="Stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="email" onclick="this.classList.add('expand')">
+        <div class="from">
+          <div class="from-contents">
+            <div class="name">무무</div>
+          </div>
+        </div>
+        <div class="to">
+          <div class="to-contents">
+            <div class="top">
+              <div class="name-large">Introduce</div>
+              <div
+                class="x-touch"
+                onclick="document.querySelector('.email').classList.remove('expand');event.stopPropagation();"
+              >
+                <div class="x">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="row">
+                <div class="link">dodora22@naver.com</div>
+              </div>
+              <div class="row">
+                <div class="link">github.com/importanthan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="detailCard.js"></script>
+  </body>
+</html>
