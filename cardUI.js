@@ -19,28 +19,18 @@ function go_list_view() {
   student_list_card_view.classList.add("d-none");
 }
 
-// const modal_wrap = document.querySelector(".modal_wrap");
-// const modal_background = document.querySelector(".modal_background");
+function open_modal() {
+  open();
+}
 
-// //Show modal
-// document.querySelector(".student").addEventListener("click", () => {
-//   open();
-// });
+function close_modal() {
+  close();
+}
 
-// //Hide modal
-// document.querySelector(".modal_close").addEventListener("click", () => {
-//   close();
-// });
+function open() {
+  document.querySelector(".hide").classList.add("modal");
+}
 
-// //Hide modal
-// window.addEventListener("click", (e) => {
-//   e.target === modal_background ? close() : false;
-// });
-// function close() {
-//   modal_wrap.classList.remove("show-modal");
-//   modal_background.classList.remove("show-modal");
-// }
-// function open() {
-//   modal_wrap.classList.add("show-modal");
-//   modal_background.classList.add("show-modal");
-// }
+function close() {
+  document.querySelector(".hide").classList.remove("modal");
+}

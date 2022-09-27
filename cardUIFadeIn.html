@@ -25,18 +25,16 @@
   </head>
   <body>
 
-    <div class="hide">
+    <!-- <div class="hide">
       <div class="bg bg_open" onclick="close_modal()"></div>
       <div class="modal_box box_open">
         <p>모달창 만들기</p>
         <button class="btn close_btn" onclick="close_modal()">X</button>
       </div>
-    </div>
+    </div> -->
 
-    <div class="container">
-
+    <div class="container">      
       <div class="contents">
-
         <div class="select_view">
           <h4 class="title"><b>Student Information</b></h4>
           <div class="view">
@@ -44,15 +42,26 @@
             <i class="fa-solid fa-list" onclick="go_list_view()"></i>
           </div>
         </div>
-
         <div class="student_list_wrapper">
           
           <!-- 카드뷰 -->
           <div class="student_list_card_view row">
-            <div class="student" onclick="open_modal()">
+            <!-- <div class="student" onclick="open_modal()">
               <div class="student_image"></div>
               <div class="student_text"></div>
+            </div> -->
+            <div class="student">
+              <input id="modalToggle" class="hide" type="checkbox">
+              <section class="modal">
+                <label class="btn btn-open" for="modalToggle">Open modal</label>
+                
+                <div class="inside">
+                  <p>Text goes here.</p>
+                  <label class="btn-close" for="modalToggle">X</label>
+                </div>
+              </section>
             </div>
+
           </div>
 
           <!-- 리스트뷰 -->
@@ -62,8 +71,10 @@
               <div class="student_text"></div>
             </div>
           </div>
-          
-      </div>
+
+        </div>
+
+        
 
     </div>
 
